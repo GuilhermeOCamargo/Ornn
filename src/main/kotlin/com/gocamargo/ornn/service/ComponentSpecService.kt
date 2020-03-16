@@ -11,4 +11,11 @@ class ComponentSpecService(val repository: ComponentSpecRepository) {
 
     fun findByType(type: String): Mono<ComponentSpec> =
             repository.findOne(Example.of(ComponentSpec(type = type)))
+
+    fun findComponentByTypeAndVersion(type: String, version: Int): Mono<ComponentSpec> =
+            findByType(type)
+                    .map { componentSpec ->
+                        println(componentSpec)
+                        componentSpec.cloneToVersion(version)
+                    }
 }

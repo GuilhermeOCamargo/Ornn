@@ -1,11 +1,13 @@
 package com.gocamargo.ornn.configuration
 
+import com.gocamargo.ornn.model.enums.ComponentType
 import com.gocamargo.ornn.repository.ComponentSpecRepository
+import com.gocamargo.ornn.service.ComponentService
 import org.springframework.boot.CommandLineRunner
 import org.springframework.context.annotation.Configuration
 
 @Configuration
-class Test(private val componentSpecRepository: ComponentSpecRepository): CommandLineRunner {
+class Test(private val componentSpecRepository: ComponentSpecRepository, private val componentService: ComponentService): CommandLineRunner {
     override fun run(vararg args: String?) {
         /*var test = OrnnSpec(ComponentType.CAROUSEL_ROW){
             description = "Component carrossel"

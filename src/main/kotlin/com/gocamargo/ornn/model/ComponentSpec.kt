@@ -8,4 +8,10 @@ data class ComponentSpec(@Id val id: String? = null,
                          val description: String? = null,
                          val type: String,
                          val contentSpec: MutableList<ContentSpec>? = null,
-                         val version: Int? = null)
+                         val version: Int? = null){
+
+    fun cloneToVersion(version: Int): ComponentSpec {
+        var content = contentSpec!!.filter { c -> c.version <= version }
+        return ComponentSpec(this.id, this.description, this.type, contentSpec, this.version)
+    }
+}
