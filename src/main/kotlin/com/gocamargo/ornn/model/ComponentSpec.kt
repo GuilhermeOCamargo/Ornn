@@ -7,5 +7,5 @@ import org.springframework.data.mongodb.core.mapping.Document
 data class ComponentSpec(@Id val id: String? = null,
                          val description: String? = null,
                          val type: String,
-                         val contentSpec: MutableList<ContentSpec>,
-                         val version: Int)
+                         val contentSpec: MutableList<ContentSpec>? = null,
+                         val version: Int? = null)

@@ -1,0 +1,9 @@
+package com.gocamargo.ornn.model
+
+import com.gocamargo.ornn.util.Content
+import org.springframework.data.mongodb.core.mapping.Document
+
+@Document(collection = "component")
+data class Component (val id: String,
+                      val type: String,
+                      val content: MutableList<Content>)
