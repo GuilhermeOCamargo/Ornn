@@ -18,8 +18,8 @@ repositories {
 
 dependencies {
 //	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+	implementation("org.springframework.boot:spring-boot-starter-data-mongodb-reactive")
 	implementation("org.springframework.boot:spring-boot-starter-webflux")
-    implementation("org.springframework.data:spring-data-elasticsearch:3.2.5.RELEASE")
 
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
