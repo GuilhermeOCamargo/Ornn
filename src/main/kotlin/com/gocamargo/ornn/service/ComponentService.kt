@@ -1,7 +1,7 @@
 package com.gocamargo.ornn.service
 
-import com.gocamargo.ornn.model.Component
-import com.gocamargo.ornn.model.ContentSpec
+import com.gocamargo.ornn.model.domain.Component
+import com.gocamargo.ornn.model.domain.ContentSpec
 import com.gocamargo.ornn.util.Content
 import org.springframework.stereotype.Service
 import reactor.core.publisher.Mono

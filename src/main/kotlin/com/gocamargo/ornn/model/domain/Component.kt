@@ -1,4 +1,4 @@
-package com.gocamargo.ornn.model
+package com.gocamargo.ornn.model.domain
 
 import com.gocamargo.ornn.util.Content
 import org.springframework.data.mongodb.core.mapping.Document

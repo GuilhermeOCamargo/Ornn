@@ -1,6 +1,6 @@
 package com.gocamargo.ornn.repository
 
-import com.gocamargo.ornn.model.ComponentSpec
+import com.gocamargo.ornn.model.domain.ComponentSpec
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository
 import org.springframework.stereotype.Repository
 

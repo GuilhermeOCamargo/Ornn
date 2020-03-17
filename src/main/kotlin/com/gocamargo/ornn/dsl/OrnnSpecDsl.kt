@@ -1,7 +1,7 @@
 package com.gocamargo.ornn.dsl
 
-import com.gocamargo.ornn.model.ComponentSpec
-import com.gocamargo.ornn.model.ContentSpec
+import com.gocamargo.ornn.model.domain.ComponentSpec
+import com.gocamargo.ornn.model.domain.ContentSpec
 import com.gocamargo.ornn.model.enums.ComponentType
 import com.gocamargo.ornn.model.enums.Type
 
@@ -32,6 +32,7 @@ class ContentSpecBuilder {
     var optional: Boolean = false
     lateinit var type: Type
     var minVersion: Int = 0
+    lateinit var description: String
 
-    fun build(): ContentSpec = ContentSpec(name, optional, type.description, minVersion)
+    fun build(): ContentSpec = ContentSpec(name, optional, type.description, minVersion, description)
 }

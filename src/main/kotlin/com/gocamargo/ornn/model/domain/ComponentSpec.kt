@@ -1,4 +1,4 @@
-package com.gocamargo.ornn.model
+package com.gocamargo.ornn.model.domain
 
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
@@ -8,10 +8,10 @@ data class ComponentSpec(@Id val id: String? = null,
                          val description: String? = null,
                          val type: String,
                          val contentSpec: MutableList<ContentSpec>? = null,
-                         val version: Int? = null){
+                         val version: Int? = null) {
 
-    fun cloneToVersion(version: Int): ComponentSpec {
-        var content = contentSpec!!.filter { c -> c.version <= version }
-        return ComponentSpec(this.id, this.description, this.type, contentSpec, this.version)
+    fun filterVersion(version: Int): ComponentSpec {
+        var content = contentSpec!!.filter { c -> c.version <= version } as MutableList
+        return ComponentSpec(this.id, this.description, this.type, content, this.version)
     }
 }

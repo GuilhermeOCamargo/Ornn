@@ -1,6 +1,8 @@
 package com.gocamargo.ornn.configuration
 
+import com.gocamargo.ornn.dsl.OrnnSpec
 import com.gocamargo.ornn.model.enums.ComponentType
+import com.gocamargo.ornn.model.enums.Type
 import com.gocamargo.ornn.repository.ComponentSpecRepository
 import com.gocamargo.ornn.service.ComponentService
 import org.springframework.boot.CommandLineRunner
@@ -17,22 +19,25 @@ class Test(private val componentSpecRepository: ComponentSpecRepository, private
                     optional = true
                     type = Type.STRING
                     minVersion = 1
+                    description = "Título do conteúdo"
                 }
                 contentSpec {
                     name = "image"
                     optional = false
                     type = Type.STRING
                     minVersion = 1
+                    description = "Imagem que aparecerá no fundo do conteúdo"
                 }
                 contentSpec {
                     name = "subtitle"
                     optional = true
                     type = Type.STRING
                     minVersion = 2
+                    description = "Subtitulo do conteúdo"
                 }
             }
             minVersion = 1
         }
-        componentRepository.save(test).block()*/
+        componentSpecRepository.save(test).block()*/
     }
 }

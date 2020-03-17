@@ -1,6 +1,6 @@
 package com.gocamargo.ornn.controller
 
-import com.gocamargo.ornn.model.Component
+import com.gocamargo.ornn.model.domain.Component
 import com.gocamargo.ornn.model.enums.ComponentType
 import com.gocamargo.ornn.service.ComponentService
 import org.springframework.web.bind.annotation.GetMapping
