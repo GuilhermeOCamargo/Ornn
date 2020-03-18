@@ -7,8 +7,8 @@ enum class Type(val description: String) {
 
     companion object{
         @JvmStatic
-        fun from(value: String){
+        fun from(value: String): Type =
             values().first{v-> v.description.equals(value, true)}
-        }
+
     }
 }

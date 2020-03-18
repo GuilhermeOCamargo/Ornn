@@ -1,8 +1,8 @@
 package com.gocamargo.ornn.dsl
 
 import com.gocamargo.ornn.model.domain.ComponentSpec
+import com.gocamargo.ornn.model.domain.ComponentType
 import com.gocamargo.ornn.model.domain.ContentSpec
-import com.gocamargo.ornn.model.enums.ComponentType
 import com.gocamargo.ornn.model.enums.Type
 
 fun OrnnSpec(type: ComponentType, block: ComponentSpecBuilder.() -> Unit): ComponentSpec = ComponentSpecBuilder(type).apply(block).build()
@@ -17,7 +17,7 @@ class ComponentSpecBuilder(private val type: ComponentType) {
     var description: String = ""
 
     fun build(): ComponentSpec {
-        return ComponentSpec(description = description, type = type.description, contentSpec = contentSpec, version = minVersion)
+        return ComponentSpec(description = description, type = type, contentSpec = contentSpec, version = minVersion)
     }
 }
 
@@ -34,5 +34,5 @@ class ContentSpecBuilder {
     var minVersion: Int = 0
     lateinit var description: String
 
-    fun build(): ContentSpec = ContentSpec(name, optional, type.description, minVersion, description)
+    fun build(): ContentSpec = ContentSpec(name, optional, type, minVersion, description)
 }

@@ -1,7 +1,6 @@
 package com.gocamargo.ornn.controller
 
 import com.gocamargo.ornn.model.domain.Component
-import com.gocamargo.ornn.model.enums.ComponentType
 import com.gocamargo.ornn.service.ComponentService
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
@@ -14,5 +13,5 @@ class ComponentController(private val componentService: ComponentService) {
 
     @GetMapping
     fun getComponent(): Mono<Component> =
-            componentService.createComponent(ComponentType.CAROUSEL_ROW.description, 1)
+            componentService.createComponent("", 1)
 }

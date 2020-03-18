@@ -1,7 +1,6 @@
 package com.gocamargo.ornn.configuration
 
 import com.gocamargo.ornn.dsl.OrnnSpec
-import com.gocamargo.ornn.model.enums.ComponentType
 import com.gocamargo.ornn.model.enums.Type
 import com.gocamargo.ornn.repository.ComponentSpecRepository
 import com.gocamargo.ornn.service.ComponentService
