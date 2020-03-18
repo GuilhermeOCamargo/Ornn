@@ -11,7 +11,7 @@ data class ComponentSpec(@Id val id: String? = null,
                          val version: Int? = null) {
 
     fun filterVersion(version: Int): ComponentSpec {
-        var content = contentSpec!!.filter { c -> c.version <= version } as MutableList
+        var content = contentSpec!!.filter { c -> c.minVersion <= version } as MutableList
         return ComponentSpec(this.id, this.description, this.type, content, this.version)
     }
 }
